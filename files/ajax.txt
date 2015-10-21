@@ -1,0 +1,1 @@
+You are seeing a AJAX request, if this page reloads without a full page refresh.
