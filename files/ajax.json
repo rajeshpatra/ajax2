@@ -1,0 +1,9 @@
+{
+		"heading": "JSON ajax file",
+		"items": {
+			"item1": "creating xhr object",
+			"item2": "handle the 'onreadystatechange' event",
+			"item3": "open the request",
+			"item4": "send the request"
+		}
+}
