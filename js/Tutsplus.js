@@ -1,4 +1,4 @@
-// create a global Tutsplus object
+// create a global Tutsplus object 
 
 var Tutsplus = {};
 
