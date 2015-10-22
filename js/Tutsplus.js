@@ -2,7 +2,7 @@
 
 var Tutsplus = {};
 
-// creatin Tutsplus.createXHR function
+// creating Tutsplus.createXHR function
 
 Tutsplus.createXHR = function(url, options) {
 	// this method will either return xhr object or false(if it couldn't create one)
@@ -20,7 +20,7 @@ Tutsplus.createXHR = function(url, options) {
 
 	if (xhr) {
 		options = options || {}; // it will pass the options or if no options then the empty object.
-		options.method = options.method || 'GET';
+		options.method = options.method || 'GET'; // it will the method
 
 		xhr.onreadystatechange = function() {
 			if((xhr.readyState == 4) && xhr.status == 200 || xhr.status ==302) {
