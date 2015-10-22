@@ -1,0 +1,9 @@
+<roadmap>
+	<heading>AJAX roadmap</heading>
+	<items>
+		<item>creating xhr object</item>
+		<item>handle the 'onreadystatechange' event</item>
+		<item>open the request</item>
+		<item>send the request</item>
+	</items>
+</roadmap>
