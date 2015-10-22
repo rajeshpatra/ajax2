@@ -12,12 +12,19 @@
 		// this new object will be global but each method inside it will be unique to that object.	
 		// lets create a Tutsplus object and call method ajax on it like Tutsplus.ajax();
 
-		Tutsplus.ajax('files/ajax.json', {
+		Tutsplus.ajax('files/ajax.txt', {
 			method: 'GET',
 			complete: function(response) {
-				var body = document.getElementsByTagName("body")[0];
+				// alert(response.heading); // for json
 
-				var json = response;
+				// alert(response.getElementsByTagName("heading")[0].firstChild.nodeValue); // for xml
+
+				alert(response); // for html and text
+
+				/* 
+				var body = document.getElementsByTagName("body")[0];
+				
+				var json = JSON.parse(xhr.responseText);
 
 				var heading = json.heading;
 				var h2 = document.createElement("h2");
@@ -27,18 +34,21 @@
 				var list = document.createElement("ul");
 
 				var items = json.items;
-				for (key in items){
-					item = items[key];
+
+				for (key in items) {
+					var item = items[key];
 					var li = document.createElement("li");
 					var liText = document.createTextNode(item);
 					li.appendChild(liText);
 					list.appendChild(li);
+
 				}
 
 				body.appendChild(h2);
 				body.appendChild(list);
 
 				body.removeChild(link);
+				*/
 			}
 		});
 
