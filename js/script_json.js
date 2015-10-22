@@ -19,7 +19,7 @@
 
 				var list = document.createElement("ul");
 
-				var items = json.items
+				var items = json.items;
 
 				for (key in items) {
 					var item = items[key];
@@ -36,10 +36,6 @@
 				body.removeChild(link);
 			}
 		};
-
-		xhr.open("GET", "files/ajax.json", true);
-
-		xhr.send(null);
 
 		return false;
 
