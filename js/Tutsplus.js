@@ -36,10 +36,10 @@ Tutsplus.createXHR = function(url, options) {
 					options.complete.call(xhr, JSON.parse(xhr.responseText));
 				}
 			}
-
-			xhr.open(options.method, url, true);
-			return xhr; // so that the below ajax method can use it after returning
 		};
+
+		xhr.open(options.method, url, true);
+		return xhr; // so that the below ajax method can use it after returning
 	} else {
 		return false;
 	}
@@ -63,6 +63,4 @@ Tutsplus.ajax = function(url, options) {
 		xhr.send(null);
 
 	}
-
-
 };
