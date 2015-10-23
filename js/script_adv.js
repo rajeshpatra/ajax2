@@ -12,14 +12,14 @@
 		// this new object will be global but each method inside it will be unique to that object.	
 		// lets create a Tutsplus object and call method ajax on it like Tutsplus.ajax();
 
-		Tutsplus.ajax('files/ajax.txt', {
+		Tutsplus.ajax('files/ajax.xml', {
 			method: 'GET',
 			complete: function(response) {
 				// alert(response.heading); // for json
 
-				// alert(response.getElementsByTagName("heading")[0].firstChild.nodeValue); // for xml
+				alert(response.getElementsByTagName("heading")[0].firstChild.nodeValue); // for xml
 
-				alert(response); // for html and text
+				// alert(response); // for html and text
 
 				/* 
 				var body = document.getElementsByTagName("body")[0];
