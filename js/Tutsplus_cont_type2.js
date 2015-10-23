@@ -23,6 +23,12 @@ Tutsplus.createXHR = function(url, options) {
 		}
 
 		xhr.onreadystatechange = function() {
+			if (xhr.readyState == 1) {
+				if (options.before) {
+					options.before.call(xhr);
+				}
+			}
+
 			if ((xhr.readyState == 4) && xhr.status == 200 || xhr.status == 304) {
 				var contentType = xhr.getResponseHeader('Content-Type'); // for handling different responses json/xml/html/txt
 
@@ -56,5 +62,14 @@ Tutsplus.ajax = function(url, options) {
 			xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 		}
 		xhr.send(options.data);
+		// xhr.send("email=ajax@gmail.com");
 	}
+};
+
+Tutsplus.flash = function(elem) {
+	elem.style.backgroundColor = "yellow";
+
+	window.setTimeout(function (){
+		elem.style.backgroundColor = "white";
+	}, 300);
 };
