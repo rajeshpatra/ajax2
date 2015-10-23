@@ -5,6 +5,12 @@ Tutsplus.createXHR = function(url, options) {
 
 	if (window.XMLHttpRequest) {
 		xhr = new XMLHttpRequest();
+	} else if (window.ActiveXObject) {
+		try {
+			xhr = new ActiveXObject("Microsoft.XMLHTTP")
+		} catch (e) {
+			return false;
+		}
 	}
 
 	if (xhr) {
